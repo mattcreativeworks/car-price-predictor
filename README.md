@@ -1,2 +1,27 @@
-# car-price-predictor
-An end-to-end machine learning pipeline and interactive Streamlit web app for used car price prediction. Features rigorous data cleaning, IQR outlier removal, feature selection, and trained ensemble models (Random Forest, Lasso) to deliver accurate, real-time vehicle market valuations.
+# Car Price Predictor — Section 8 Deployment
+
+## Setup (3 steps)
+
+### Step 1 — Save model from notebook
+Copy the code in `save_model_notebook_cell.py` into a new cell
+at the end of your notebook and run it. It creates two files:
+- `preprocessor.pkl`
+- `gbr_model.pkl`
+
+### Step 2 — Folder structure
+Make sure all four files are in the same folder:
+```
+your_folder/
+├── app.py
+├── preprocessor.pkl
+├── gbr_model.pkl
+└── requirements.txt
+```
+
+### Step 3 — Run the app
+Open a terminal in that folder and run:
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+The app will open automatically at http://localhost:8501
