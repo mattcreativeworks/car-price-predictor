@@ -370,7 +370,7 @@ with left_col:
     <div class="hero-sub">Car Price Intelligence System</div>
       <div class="bar"></div>
       <div class="hero-desc">
-        Gradient Boosting AI trained on 11,702 real listings.<br/>
+        Gradient Boosting Algorithm trained on 11,702 real listings.<br/>
         Enter your car specs and receive an instant price estimate.
       </div>
       <div class="stats-row" style="margin-top:2rem;">
