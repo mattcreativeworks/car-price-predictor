@@ -9,7 +9,7 @@ import numpy as np
 import joblib
 
 st.set_page_config(
-    page_title="Mr Matt | Car Price Intelligence",
+    page_title="Car Price Intelligence",
     page_icon="911",
     layout="wide",
 )
@@ -367,8 +367,7 @@ left_col, right_col = st.columns([0.85, 1.15], gap="large")
 with left_col:
     st.markdown("""
     <div class="hero" style="min-height:100vh;padding:3rem 2rem 2rem;">
-      <div class="hero-name">MR<br/><span class="gold">MATT</span></div>
-      <div class="hero-sub">Car Price Intelligence System</div>
+    <div class="hero-sub">Car Price Intelligence System</div>
       <div class="bar"></div>
       <div class="hero-desc">
         Gradient Boosting AI trained on 11,702 real listings.<br/>
@@ -485,6 +484,6 @@ with right_col:
 
 st.markdown("""
 <div class="footer">
-  Mr Matt &nbsp; Car Price Intelligence &nbsp; REG1521214 &nbsp; PDDS Major Project
+Car Price Intelligence &nbsp; REG1521214 &nbsp; PDDS Major Project
 </div>
 """, unsafe_allow_html=True)
