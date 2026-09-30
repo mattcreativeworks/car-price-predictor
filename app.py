@@ -1,5 +1,5 @@
 """
-REG1521214 - Mr Matt | Car Price Intelligence
+REG1521214 | Car Price Intelligence
 Section 8: Model Deployment - Porsche 911 Edition
 """
 
@@ -30,7 +30,7 @@ PORSCHE_B64 = "/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQOD
 
 st.markdown(f"""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ====== RESET EVERY STREAMLIT WRAPPER ====== */
 html, body {{
@@ -116,8 +116,8 @@ body::before {{
     border: 1px solid rgba(192,160,98,0.5);
     border-radius: 999px;
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
     color: #c0a062;
     background: rgba(192,160,98,0.06);
     margin-bottom: 1.5rem;
@@ -137,7 +137,7 @@ body::before {{
 
 .hero-name {{
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-size: clamp(4rem, 9vw, 8rem);
     font-weight: 900;
     line-height: 0.88;
     color: #ffffff;
@@ -148,10 +148,10 @@ body::before {{
 .gold {{ color: #c0a062 !important; text-shadow: 0 0 50px rgba(192,160,98,0.35), 0 4px 60px rgba(0,0,0,0.9) !important; }}
 
 .hero-sub {{
-    font-size: 0.82rem;
-    color: #999;
+    font-size: 1.05rem;
+    color: #bbb;
     margin-top: 1rem;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     animation: fadeL 0.8s ease 0.2s both;
 }}
@@ -164,7 +164,7 @@ body::before {{
 @keyframes grow {{ from{{width:0;}} to{{width:60px;}} }}
 .hero-desc {{
     font-size: 0.88rem;
-    color: #777;
+    color: #c7ced8;
     line-height: 1.75;
     max-width: 400px;
     animation: fadeL 0.8s ease 0.3s both;
@@ -177,18 +177,18 @@ body::before {{
 .stat {{ border-left: 2px solid rgba(192,160,98,0.3); padding-left: 1rem; }}
 .stat-val {{
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 1.3rem; font-weight: 700;
+    font-size: 1.6rem; font-weight: 700;
     color: #fff; line-height: 1;
 }}
 .stat-val em {{ color: #c0a062; font-style: normal; }}
 .stat-lbl {{
     font-size: 0.58rem; letter-spacing: 0.22em;
-    color: #444; text-transform: uppercase; margin-top: 5px;
+    color: #aeb8c5; text-transform: uppercase; margin-top: 5px;
 }}
 .scroll-hint {{
     margin-top: 3rem;
     font-size: 0.58rem; letter-spacing: 0.35em;
-    color: #333; text-transform: uppercase;
+    color: #64748b; text-transform: uppercase;
     display: flex; align-items: center; gap: 10px;
     animation: fadeL 0.8s ease 0.5s both;
 }}
@@ -210,13 +210,13 @@ body::before {{
 }}
 .sec-label {{
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.58rem; letter-spacing: 0.45em;
-    color: #c0a062; text-transform: uppercase; margin-bottom: 0.4rem;
+    font-size: 0.78rem; letter-spacing: 0.3em;
+    color: #d4b36a; text-transform: uppercase; margin-bottom: 0.4rem;
 }}
 .sec-heading {{
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 1.5rem; font-weight: 700;
-    color: #ffffff; margin-bottom: 2.5rem;
+    font-size: 1.8rem; font-weight: 700;
+    color: #ffffff; margin-bottom: 1.5rem;
     text-shadow: 0 2px 20px rgba(0,0,0,0.9);
 }}
 
@@ -234,18 +234,18 @@ body::before {{
 .glass:hover {{ border-color: rgba(192,160,98,0.2) !important; }}
 .card-label {{
     font-size: 0.58rem; letter-spacing: 0.3em;
-    color: #3a3a3a; text-transform: uppercase;
+    color: #cbd5e1; text-transform: uppercase;
     margin-bottom: 1.2rem; font-weight: 600;
 }}
 
 /* ====== INPUT OVERRIDES ====== */
 label, .stSelectbox label, .stNumberInput label, .stSlider label {{
-    font-family: 'Inter', sans-serif !important;
-    font-size: 0.67rem !important;
-    letter-spacing: 0.2em !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
-    color: #555 !important;
-    font-weight: 500 !important;
+    color: #dbe4ee !important;
+    font-weight: 600 !important;
 }}
 [data-baseweb="select"] > div,
 .stSelectbox > div > div,
@@ -255,15 +255,19 @@ label, .stSelectbox label, .stNumberInput label, .stSlider label {{
     border-radius: 10px !important;
     color: #f0f0f0 !important;
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.92rem !important;
+    font-size: 1rem !important;
 }}
 [data-baseweb="select"] > div:hover,
 .stNumberInput > div > div > input:focus {{
     border-color: rgba(192,160,98,0.5) !important;
     box-shadow: 0 0 0 3px rgba(192,160,98,0.07) !important;
 }}
-.stSlider > div > div > div > div {{ background: #c0a062 !important; }}
-.stSlider > div > div > div {{ background: rgba(192,160,98,0.15) !important; }}
+.stSlider > div > div > div > div {{ background: #d4b36a !important; box-shadow: 0 0 8px rgba(212,179,106,0.7) !important; }}
+.stSlider > div > div > div {{ background: rgba(255,255,255,0.25) !important; height: 6px !important; border-radius: 3px !important; }}
+.stSlider [data-testid="stThumbValue"] {{ color: #f8fafc !important; font-weight: 700 !important; font-size: 0.85rem !important; }}
+.stSlider {{ padding: 0.5rem 0 !important; }}
+[data-testid="stSliderThumb"] {{ background: #d4b36a !important; border: 2px solid #ffffff !important; width: 18px !important; height: 18px !important; box-shadow: 0 0 12px rgba(212,179,106,0.8) !important; }}
+.stSlider label {{ color: #f1f5f9 !important; font-weight: 600 !important; font-size: 0.80rem !important; }}
 
 /* ====== BUTTON ====== */
 .stButton > button {{
@@ -274,9 +278,9 @@ label, .stSelectbox label, .stNumberInput label, .stSlider label {{
     border-radius: 10px !important;
     padding: 1.1rem 2rem !important;
     font-family: 'Inter', system-ui, sans-serif !important;
-    font-size: 0.72rem !important;
+    font-size: 0.78rem !important;
     font-weight: 700 !important;
-    letter-spacing: 0.3em !important;
+    letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
     box-shadow: 0 8px 32px rgba(192,160,98,0.22) !important;
     transition: all 0.25s ease !important;
@@ -310,577 +314,174 @@ label, .stSelectbox label, .stNumberInput label, .stSlider label {{
 }}
 .res-pre {{
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.57rem; letter-spacing: 0.45em;
+    font-size: 0.78rem; letter-spacing: 0.3em;
     color: #c0a062; text-transform: uppercase; margin-bottom: 0.5rem;
 }}
 .res-price {{
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
     font-weight: 900; color: #fff;
     text-shadow: 0 0 50px rgba(192,160,98,0.28);
     line-height: 1; margin-bottom: 0.4rem;
 }}
-.res-lakhs {{ font-size: 0.9rem; color: #4a4a4a; letter-spacing:0.06em; margin-bottom:2rem; }}
+.res-lakhs {{ font-size: 0.9rem; color: #aeb8c5; letter-spacing:0.06em; margin-bottom:2rem; }}
 .pills {{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1.5rem; }}
 .pill {{
     padding: 5px 14px; border-radius: 999px;
     border: 1px solid rgba(255,255,255,0.06);
     background: rgba(255,255,255,0.02);
-    font-size: 0.7rem; color: #666;
+    font-size: 0.7rem; color: #94a3b8;
 }}
-.pill b {{ color: #bbb; }}
+.pill b {{ color: #f1f5f9; }}
 .res-range {{
     padding: 1rem 1.4rem;
     background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.04);
-    border-radius: 10px; font-size: 0.8rem; color: #444;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; font-size: 0.8rem; color: #94a3b8;
 }}
-.res-range b {{ color: #777; }}
+.res-range b {{ color: #f1f5f9; }}
 
 /* ====== FOOTER ====== */
 .footer {{
     text-align: center;
     padding: 2rem 1rem 2.5rem;
-    border-top: 1px solid rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.12);
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.48rem; letter-spacing: 0.3em;
-    color: #222; text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: #94a3b8;
+    text-transform: uppercase;
 }}
-/* ====== MODERN HIGH-VISIBILITY TYPOGRAPHY ====== */
-/* Keep the existing UI structure; improve readability only. */
-html, body, [data-testid="stAppViewContainer"], [data-testid="stMain"] {{
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-}}
-
-.hero-name, .sec-heading, .res-price {{
-    font-family: 'Inter', system-ui, sans-serif !important;
-    font-weight: 800 !important;
-    letter-spacing: -0.025em !important;
-}}
-
-.hero-sub, .sec-label, .res-pre, .footer, .hero-tag, .stat-lbl, .scroll-hint,
-.card-label, label, .stSelectbox label, .stNumberInput label, .stSlider label {{
-    font-family: 'Inter', system-ui, sans-serif !important;
-}}
-
-/* Section/card labels: bright enough against the glass panels */
-.card-label {{
-    color: #cbd5e1 !important;
-    font-size: 0.66rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.22em !important;
-}}
-
-label, .stSelectbox label, .stNumberInput label, .stSlider label {{
-    color: #dbe4ee !important;
-    font-size: 0.70rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.12em !important;
-}}
-
-.sec-label, .hero-tag, .res-pre {{
-    color: #d4b36a !important;
-}}
-
-.sec-heading {{
-    color: #f8fafc !important;
-    font-size: 1.65rem !important;
-}}
-
-.hero-sub {{ color: #d1d5db !important; }}
-.hero-desc {{ color: #c7ced8 !important; }}
-.stat-lbl {{ color: #aeb8c5 !important; }}
-.scroll-hint {{ color: #9ca7b5 !important; }}
-
-/* Inputs: clear white text with a subtle cool border */
-[data-baseweb="select"] > div,
-.stSelectbox > div > div,
-.stNumberInput > div > div > input {{
-    background: rgba(20, 24, 30, 0.78) !important;
-    border: 1px solid rgba(226, 232, 240, 0.24) !important;
-    color: #f8fafc !important;
-    font-family: 'Inter', system-ui, sans-serif !important;
-    font-size: 0.94rem !important;
-    font-weight: 500 !important;
-}}
-
-[data-baseweb="select"] [data-testid="stMarkdownContainer"],
-[data-baseweb="select"] span,
-[data-baseweb="select"] div,
-.stNumberInput input {{
-    color: #f8fafc !important;
-}}
-
-[data-baseweb="select"] svg {{
-    fill: #e2e8f0 !important;
-    color: #e2e8f0 !important;
-}}
-
-/* Number +/- controls */
-.stNumberInput button {{
-    color: #e2e8f0 !important;
-    background: rgba(255,255,255,0.06) !important;
-    border-color: rgba(226,232,240,0.16) !important;
-}}
-.stNumberInput button:hover {{
-    color: #ffffff !important;
-    background: rgba(212,179,106,0.18) !important;
-}}
-
-/* Dropdown menu */
-[role="listbox"], [role="option"] {{
-    background: #171b21 !important;
-    color: #f8fafc !important;
-}}
-[role="option"]:hover, [role="option"][aria-selected="true"] {{
-    background: #2a3038 !important;
-    color: #ffffff !important;
-}}
-
-/* Softer, cleaner glass */
-.glass {{
-    background: rgba(9, 12, 16, 0.78) !important;
-    border-color: rgba(226,232,240,0.14) !important;
-}}
-.glass:hover {{ border-color: rgba(212,179,106,0.38) !important; }}
-
-/* Make the Porsche background readable without washing it out */
-body::before {{
-    background: linear-gradient(
-        120deg,
-        rgba(0,0,0,0.84) 0%,
-        rgba(0,0,0,0.72) 45%,
-        rgba(0,0,0,0.48) 70%,
-        rgba(0,0,0,0.20) 100%
-    ) !important;
-}}
-
-/* Result details */
-.res-lakhs {{ color: #aeb8c5 !important; }}
-.pill {{ color: #cbd5e1 !important; border-color: rgba(226,232,240,0.13) !important; }}
-.pill b {{ color: #f1f5f9 !important; }}
-.res-range {{ color: #cbd5e1 !important; border-color: rgba(226,232,240,0.12) !important; }}
-.res-range b {{ color: #f1f5f9 !important; }}
-.footer {{ color: #8b95a3 !important; }}
-
-
-
-/* ====== TWO-COLUMN LAYOUT ====== */
-.hero-panel,
-.form-panel {{
-    min-height: 100%;
-}}
-
-.hero-panel {{
-    padding: 2.6rem 2.2rem 2.2rem !important;
-    border-radius: 18px;
-    background: rgba(5, 7, 10, 0.38);
-    border: 1px solid rgba(226,232,240,0.10);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}}
-
-.form-panel {{
-    padding: 0 0 1.1rem 0 !important;
-}}
-
-.stats-stack {{
-    gap: 1.1rem !important;
-    margin-top: 2rem !important;
-}}
-
-.stat {{ min-width: 0; }}
-
-.stat-lbl {{
-    font-size: 0.82rem !important;
-    font-weight: 650 !important;
-    letter-spacing: 0.10em !important;
-}}
-
-.hero-desc {{
-    font-size: 1.02rem !important;
-    line-height: 1.75 !important;
-}}
-
-.hero-sub {{
-    font-size: 1.05rem !important;
-    font-weight: 600 !important;
-}}
-
-.sec-label {{
-    font-size: 0.82rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.18em !important;
-}}
-
-.sec-heading {{
-    font-size: clamp(1.55rem, 2.2vw, 2rem) !important;
-    line-height: 1.15 !important;
-}}
-
-.card-label {{
-    font-size: 0.78rem !important;
-    letter-spacing: 0.16em !important;
-}}
-
-label,
-.stSelectbox label,
-.stNumberInput label,
-.stSlider label {{
-    font-size: 0.82rem !important;
-    line-height: 1.35 !important;
-    letter-spacing: 0.07em !important;
-}}
-
-[data-baseweb="select"] > div,
-.stNumberInput > div > div > input {{
-    min-height: 2.65rem !important;
-    font-size: 0.96rem !important;
-}}
-
-.glass {{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1.05rem 1rem 1rem !important;
-}}
-
-.button-panel {{
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 0.05rem;
-}}
-
-.button-panel .stButton {{ width: 100%; }}
-
-.stButton > button {{
-    min-height: 2.85rem !important;
-    font-size: 0.78rem !important;
-    letter-spacing: 0.16em !important;
-}}
-
-.scroll-hint {{
-    font-size: 0.78rem !important;
-    letter-spacing: 0.08em !important;
-}}
-
-@media (max-width: 1100px) {{
-    .hero-panel {{ padding: 2rem 1.5rem 1.7rem !important; }}
-    .hero-name {{ font-size: clamp(2.8rem, 7vw, 4.5rem) !important; }}
-    .hero-desc {{ font-size: 0.95rem !important; }}
-    .card-label {{ font-size: 0.72rem !important; }}
-    label,
-    .stSelectbox label,
-    .stNumberInput label,
-    .stSlider label {{ font-size: 0.78rem !important; }}
-}}
-
-@media (max-width: 800px) {{
-    .hero-panel {{ margin-bottom: 1rem; }}
-}}
-
-
-/* ====== FINAL FIXES: INTER FONT LOCK / VIVID TEXT / SLIDER / FOOTER ====== */
-.hero-name, .sec-heading, .res-price, .res-pre, .hero-tag, .stat-val,
-.footer, .scroll-hint, .sec-label {{
-    font-family: 'Inter', system-ui, sans-serif !important;
-}}
-
-/* Brighter, more vivid body copy */
-.hero-desc {{ color: #d3dae4 !important; }}
-.stat-lbl  {{ color: #c6cfdb !important; }}
-.scroll-hint {{ color: #b9c4d2 !important; }}
-.hero-sub  {{ color: #dbe2ec !important; }}
-
-/* Fuel-efficiency slider: bright gold track + glowing thumb */
-[data-baseweb="slider"] > div {{
-    background-color: rgba(230,236,244,0.30) !important;
-    height: 6px !important;
-    border-radius: 999px !important;
-}}
-[data-baseweb="slider"] > div > div {{
-    background: linear-gradient(90deg, #8a6f3a, #d8b671) !important;
-    border-radius: 999px !important;
-    height: 6px !important;
-}}
-div[role="slider"] {{
-    background-color: #f0d9a0 !important;
-    border: 2px solid #fff6dd !important;
-    box-shadow: 0 0 0 4px rgba(216,182,113,0.28), 0 0 16px rgba(216,182,113,0.6) !important;
-}}
-[data-testid="stSlider"] label,
-[data-testid="stSlider"] [data-testid="stMarkdownContainer"] p {{
-    color: #eef2f8 !important;
-}}
-
-/* Footer: clearly readable */
-.footer {{
-    color: #d8dfe9 !important;
-    font-size: 0.62rem !important;
-    letter-spacing: 0.28em !important;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.85) !important;
-}}
-
-
-/* ====== RESPONSIVE WRAPPER FOR RESULT ====== */
-.result-wrap {{ padding: 0 6rem 4rem; }}
-
-/* ====== MOBILE OPTIMIZATION ====== */
-@media (max-width: 900px) {{
-
-    /* Stack Streamlit columns vertically: hero over form, form cards full-width */
-    [data-testid="stHorizontalBlock"] {{
-        flex-wrap: wrap !important;
-        gap: 1rem !important;
-    }}
-    [data-testid="stHorizontalBlock"] > [data-testid="column"] {{
-        flex: 1 1 100% !important;
-        min-width: 100% !important;
-        width: 100% !important;
-    }}
-
-    /* Hero panel: full width, natural height, compact padding */
-    .hero {{
-        min-height: auto !important;
-        max-width: 100% !important;
-        padding: 3.5rem 1.25rem 2.5rem !important;
-    }}
-    .hero-panel {{
-        padding: 2rem 1.4rem 1.8rem !important;
-    }}
-    .hero-name {{
-        font-size: clamp(3rem, 14vw, 4.6rem) !important;
-        line-height: 0.92 !important;
-    }}
-    .hero-sub {{ font-size: 0.92rem !important; letter-spacing: 0.28em !important; }}
-    .hero-desc {{ font-size: 0.95rem !important; }}
-    .bar {{ margin: 1.2rem 0 !important; }}
-
-    /* Stats: wrap instead of overflowing */
-    .stats-row {{
-        flex-wrap: wrap !important;
-        gap: 1.4rem 2rem !important;
-        margin-top: 1.8rem !important;
-    }}
-    .stat-val {{ font-size: 1.15rem !important; }}
-
-    /* Form section: compact side padding */
-    .form-section {{ padding: 3rem 1.25rem 2rem !important; }}
-    .sec-heading {{ margin-bottom: 1.6rem !important; }}
-
-    /* Glass cards: tighter padding */
-    .glass {{ padding: 1.1rem 0.95rem 1rem !important; margin-bottom: 0.9rem !important; }}
-
-    /* Button: comfortable tap target */
-    .stButton > button {{
-        min-height: 3.1rem !important;
-        padding: 1rem 1.5rem !important;
-    }}
-    .button-panel {{ padding-bottom: 0 !important; }}
-
-    /* Result box: full width, readable on small screens */
-    .result-wrap {{ padding: 0 1rem 2.5rem !important; }}
-    .result-box {{ padding: 1.8rem 1.4rem !important; }}
-    .res-price {{ font-size: clamp(1.7rem, 8vw, 2.6rem) !important; }}
-    .pills {{ gap: 6px !important; }}
-    .pill {{ font-size: 0.66rem !important; padding: 4px 11px !important; }}
-
-    /* Footer: smaller on phones */
-    .footer {{
-        font-size: 0.52rem !important;
-        letter-spacing: 0.18em !important;
-        padding: 1.5rem 0.75rem 2rem !important;
-    }}
-}}
-
-/* Small phones */
-@media (max-width: 420px) {{
-    .hero {{ padding: 3rem 1rem 2rem !important; }}
-    .hero-name {{ font-size: clamp(2.6rem, 15vw, 3.6rem) !important; }}
-    .form-section {{ padding: 2.5rem 1rem 1.5rem !important; }}
-    .stats-row {{ gap: 1.2rem 1.5rem !important; }}
-}}
-
 </style>
 """, unsafe_allow_html=True)
 
-# ── MAIN TWO-COLUMN LAYOUT ─────────────────────────────────────────────────────
-# Left: branding + system description + performance metrics
-# Right: vehicle pricing form
-left_col, right_col = st.columns([0.88, 1.12], gap="large")
 
+# ══════════════════════════════════════════════════════════════════════════════
+# TWO-COLUMN LAYOUT: Left = Mr Matt branding | Right = Form + Result
+# Everything fits in one viewport — no scrolling required
+# ══════════════════════════════════════════════════════════════════════════════
+left_col, right_col = st.columns([0.85, 1.15], gap="large")
+
+# ── LEFT: Mr Matt Branding ────────────────────────────────────────────────────
 with left_col:
     st.markdown("""
-    <div class="hero hero-panel">
-      <div class="hero-tag"><div class="dot"></div>LIVE AI PRICING ENGINE</div>
+    <div class="hero" style="min-height:100vh;padding:3rem 2rem 2rem;">
       <div class="hero-name">MR<br/><span class="gold">MATT</span></div>
       <div class="hero-sub">Car Price Intelligence System</div>
       <div class="bar"></div>
       <div class="hero-desc">
-        Gradient Boosting AI trained on 11,992 real listings.<br/>
+        Gradient Boosting AI trained on 11,702 real listings.<br/>
         Enter your car specs and receive an instant price estimate.
       </div>
-      <div class="stats-row stats-stack">
-        <div class="stat">
-          <div class="stat-val"><em>93.8</em>%</div>
-          <div class="stat-lbl">Model R2</div>
-        </div>
-        <div class="stat">
-          <div class="stat-val"><em>11,702</em></div>
-          <div class="stat-lbl">Listings</div>
-        </div>
-        <div class="stat">
-          <div class="stat-val">±<em>12.6</em>%</div>
-          <div class="stat-lbl">Avg Error</div>
-        </div>
+      <div class="stats-row" style="margin-top:2rem;">
+        <div class="stat"><div class="stat-val"><em>93.8</em>%</div><div class="stat-lbl">Model R2</div></div>
+        <div class="stat"><div class="stat-val"><em>11,702</em></div><div class="stat-lbl">Listings</div></div>
+        <div class="stat"><div class="stat-val">+-<em>12.6</em>%</div><div class="stat-lbl">Avg Error</div></div>
       </div>
-      <div class="scroll-hint">Vehicle valuation intelligence</div>
+      <div class="scroll-hint" style="margin-top:2rem;">Vehicle valuation intelligence</div>
     </div>
     """, unsafe_allow_html=True)
 
+# ── RIGHT: Form + Result ──────────────────────────────────────────────────────
 with right_col:
     st.markdown("""
-    <div class="form-section form-panel">
+    <div style="padding:2.5rem 1.5rem 1rem 0.5rem;">
       <div class="sec-label">Step 01</div>
       <div class="sec-heading">Vehicle Specifications</div>
     </div>
     """, unsafe_allow_html=True)
 
-    with st.container():
-        c1, c2, c3 = st.columns([1, 1, 1], gap="medium")
+    # ── ROW 1: Identity | Performance | Powertrain ────────────────────────────
+    r1c1, r1c2, r1c3 = st.columns(3, gap="small")
 
-        with c1:
-            st.markdown('<div class="glass"><div class="card-label">Identity</div>', unsafe_allow_html=True)
-            brand = st.selectbox("Brand", [
-                "Maruti", "Hyundai", "Honda", "Toyota", "Ford", "Tata", "Mahindra",
-                "Volkswagen", "Renault", "Skoda", "Kia", "Mercedes-Benz", "Bmw", "Audi",
-                "Jeep", "Land Rover", "Datsun", "Nissan", "Volvo", "Porsche", "Jaguar",
-                "Lexus", "Mini", "Mg", "Maserati", "Bentley", "Ferrari", "Rolls-Royce", "Isuzu", "Force",
-            ])
-            vehicle_age = st.number_input(
-                "Vehicle Age (years)", min_value=0, max_value=29, value=5, step=1
-            )
-            st.markdown('</div>', unsafe_allow_html=True)
+    with r1c1:
+        st.markdown('<div class="glass"><div class="card-label">Identity</div>', unsafe_allow_html=True)
+        brand = st.selectbox("Brand", [
+            "Maruti","Hyundai","Honda","Toyota","Ford","Tata","Mahindra",
+            "Volkswagen","Renault","Skoda","Kia","Mercedes-Benz","Bmw","Audi",
+            "Jeep","Land Rover","Datsun","Nissan","Volvo","Porsche","Jaguar",
+            "Lexus","Mini","Mg","Maserati","Bentley","Ferrari","Rolls-Royce","Isuzu","Force",
+        ])
+        vehicle_age = st.number_input("Age (years)", min_value=0, max_value=29, value=5, step=1)
+        km_driven   = st.number_input("KM Driven", min_value=100, max_value=200_000, value=45_000, step=1_000)
+        st.markdown('</div>', unsafe_allow_html=True)
 
-        with c2:
-            st.markdown('<div class="glass"><div class="card-label">Performance</div>', unsafe_allow_html=True)
-            max_power = st.number_input(
-                "Max Power (bhp)", min_value=38.0, max_value=250.0, value=85.0, step=0.5
-            )
-            mileage = st.slider(
-                "Fuel Efficiency (km/l)", min_value=4.0, max_value=35.0, value=19.0, step=0.5
-            )
-            st.markdown('</div>', unsafe_allow_html=True)
+    with r1c2:
+        st.markdown('<div class="glass"><div class="card-label">Performance</div>', unsafe_allow_html=True)
+        max_power = st.number_input("Max Power (bhp)", min_value=38.0, max_value=250.0, value=85.0, step=0.5)
+        mileage   = st.number_input("Fuel Efficiency (km/l)", min_value=4.0, max_value=35.0, value=19.0, step=0.5)
+        seats     = st.selectbox("Seats", [2,4,5,6,7,8,9], index=2)
+        st.markdown('</div>', unsafe_allow_html=True)
 
-        with c3:
-            st.markdown('<div class="glass"><div class="card-label">Configuration</div>', unsafe_allow_html=True)
-            fuel_type = st.selectbox("Fuel Type", ["Petrol", "Diesel", "CNG", "LPG"])
-            transmission_type = st.selectbox("Transmission", ["Manual", "Automatic"])
-            seats = st.selectbox("Seats", [2, 4, 5, 6, 7, 8, 9], index=2)
-            st.markdown('</div>', unsafe_allow_html=True)
+    with r1c3:
+        st.markdown('<div class="glass"><div class="card-label">Powertrain</div>', unsafe_allow_html=True)
+        fuel_type         = st.selectbox("Fuel Type", ["Petrol","Diesel","CNG","LPG"])
+        transmission_type = st.selectbox("Transmission", ["Manual","Automatic"])
+        seller_type       = st.selectbox("Seller Type", ["Individual","Dealer","Trustmark Dealer"])
+        st.markdown('</div>', unsafe_allow_html=True)
 
-        c4, c5 = st.columns([1.55, 0.75], gap="medium")
+    # ── ROW 2: Button ─────────────────────────────────────────────────────────
+    st.markdown('<div style="padding:0.5rem 0 0.25rem;">', unsafe_allow_html=True)
+    predict_btn = st.button(" GET PRICE ESTIMATE", use_container_width=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-        with c4:
-            st.markdown('<div class="glass"><div class="card-label">Usage and Seller</div>', unsafe_allow_html=True)
-            km_driven = st.number_input(
-                "Kilometres Driven", min_value=100, max_value=200_000, value=45_000, step=1_000
-            )
-            seller_type = st.selectbox(
-                "Seller Type", ["Individual", "Dealer", "Trustmark Dealer"]
-            )
-            st.markdown('</div>', unsafe_allow_html=True)
-
-        with c5:
-            st.markdown('<div class="button-panel">', unsafe_allow_html=True)
-            predict_btn = st.button("GET PRICE ESTIMATE", use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
-
-# ── RESULT ────────────────────────────────────────────────────────────────────
-if predict_btn:
-    if not model_loaded:
-        st.markdown("""
-        <div class="result-wrap">
-          <div style="background:rgba(0,0,0,0.7);border:1px solid rgba(192,160,98,0.2);
-               border-radius:12px;padding:1.5rem 2rem;color:#c0a062;font-size:0.9rem;">
-            Model files not found. Run save_model_notebook_cell in your notebook.
-          </div>
-        </div>""", unsafe_allow_html=True)
-    else:
-        input_data = pd.DataFrame([{
-            "brand"            : brand,
-            "vehicle_age"      : vehicle_age,
-            "km_driven"        : km_driven,
-            "seller_type"      : seller_type,
-            "fuel_type"        : fuel_type,
-            "transmission_type": transmission_type,
-            "mileage"          : mileage,
-            "max_power_log"    : np.log1p(max_power),
-            "seats"            : seats,
-        }])
-        X_processed   = preprocessor.transform(input_data)
-        feature_names = preprocessor.get_feature_names_out()
-        X_df          = pd.DataFrame(X_processed, columns=feature_names)
-        # IMPORTANT: Use the exact feature names AND order used when the model was fitted.
-        # This fixes sklearn's "Feature names must match" error without changing the UI.
-        if hasattr(model, "feature_names_in_"):
-            expected_features = list(model.feature_names_in_)
-
-            missing_features = [
-                f for f in expected_features
-                if f not in X_df.columns
-            ]
-
-            if missing_features:
-                st.error(
-                    "The trained model expects features that are missing after preprocessing: "
-                    + ", ".join(missing_features)
-                )
-                st.stop()
-
-            # Reindex guarantees the exact training order.
-            X_selected = X_df.reindex(columns=expected_features)
+    # ── ROW 3: Result (appears in same column, below the button) ──────────────
+    if predict_btn:
+        if not model_loaded:
+            st.markdown("""
+            <div style="background:rgba(0,0,0,0.7);border:1px solid rgba(192,160,98,0.2);
+                 border-radius:12px;padding:1.2rem 1.5rem;color:#c0a062;font-size:0.88rem;margin-top:0.5rem;">
+              Model files not found. Run save_model_notebook_cell in your notebook.
+            </div>""", unsafe_allow_html=True)
         else:
-            # Fallback for models saved without feature_names_in_.
-            # Keep the original feature-selection behaviour.
-            top_k = [
-                "vehicle_age", "max_power_log", "brand", "fuel_type_Diesel",
-                "fuel_type_Petrol", "transmission_type_Manual", "seats",
-                "fuel_type_LPG", "seller_type_Individual",
-                "seller_type_Trustmark Dealer"
-            ]
-            available = [f for f in top_k if f in X_df.columns]
-            X_selected = X_df[available]
+            input_data = pd.DataFrame([{
+                "brand"            : brand,
+                "vehicle_age"      : vehicle_age,
+                "km_driven"        : km_driven,
+                "seller_type"      : seller_type,
+                "fuel_type"        : fuel_type,
+                "transmission_type": transmission_type,
+                "mileage"          : mileage,
+                "max_power_log"    : np.log1p(max_power),
+                "seats"            : seats,
+            }])
+            X_processed   = preprocessor.transform(input_data)
+            feature_names = preprocessor.get_feature_names_out()
+            X_df          = pd.DataFrame(X_processed, columns=feature_names)
+            # Correct top-10 from SelectKBest f_regression output
+            top_k         = ["max_power_log","brand","transmission_type_Manual",
+                             "vehicle_age","fuel_type_Diesel","fuel_type_Petrol",
+                             "mileage","seats","seller_type_Individual","km_driven"]
+            available     = [f for f in top_k if f in X_df.columns]
+            X_selected    = X_df[available]
+            log_price     = model.predict(X_selected)[0]
+            price_inr     = np.expm1(log_price)
+            lower         = np.expm1(log_price - 0.1261)
+            upper         = np.expm1(log_price + 0.1261)
 
-        log_price = model.predict(X_selected)[0]
-        price_inr     = np.expm1(log_price)
-        lower         = np.expm1(log_price - 0.1261)
-        upper         = np.expm1(log_price + 0.1261)
-
-        st.markdown(f"""
-        <div class="result-wrap">
-          <div class="result-box">
-            <div class="res-pre">Estimated Resale Value</div>
-            <div class="res-price">Rs. {price_inr:,.0f}</div>
-            <div class="res-lakhs">approximately Rs. {price_inr/1e5:.2f} Lakhs</div>
-            <div class="pills">
-              <div class="pill"><b>{brand}</b></div>
-              <div class="pill"><b>{vehicle_age}</b> yrs</div>
-              <div class="pill"><b>{km_driven:,}</b> km</div>
-              <div class="pill"><b>{fuel_type}</b></div>
-              <div class="pill"><b>{transmission_type}</b></div>
-              <div class="pill"><b>{seats}</b> seats</div>
-              <div class="pill"><b>{max_power}</b> bhp</div>
-              <div class="pill"><b>{mileage}</b> km/l</div>
+            st.markdown(f"""
+            <div class="result-box" style="margin-top:0.75rem;">
+              <div class="res-pre">Estimated Resale Value</div>
+              <div class="res-price">Rs. {price_inr:,.0f}</div>
+              <div class="res-lakhs">approx. Rs. {price_inr/1e5:.2f} Lakhs</div>
+              <div class="pills">
+                <div class="pill"><b>{brand}</b></div>
+                <div class="pill"><b>{vehicle_age}</b> yrs</div>
+                <div class="pill"><b>{km_driven:,}</b> km</div>
+                <div class="pill"><b>{fuel_type}</b></div>
+                <div class="pill"><b>{transmission_type}</b></div>
+                <div class="pill"><b>{seats}</b> seats</div>
+                <div class="pill"><b>{max_power}</b> bhp</div>
+                <div class="pill"><b>{mileage}</b> km/l</div>
+              </div>
+              <div class="res-range">
+                <b>Confidence Range:</b>
+                Rs. {lower:,.0f} — Rs. {upper:,.0f}
+                <span style="color:#3a3a3a;"> | R²=0.9376 | GBR | ±12.6%</span>
+              </div>
             </div>
-            <div class="res-range">
-              <b>Confidence Range:</b>
-              Rs. {lower:,.0f} to Rs. {upper:,.0f}
-              <span style="color:#2a2a2a"> | R2=0.9376 | GBR | +/-12.6%</span>
-            </div>
-          </div>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
 
 st.markdown("""
 <div class="footer">
